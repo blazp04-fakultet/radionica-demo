@@ -1,14 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted } from 'vue'
 
-const cities = ref<Array<{
-  id: string,
-  name: string,
-  country: string,
-  imageUrl: string
-}>>([])
+const cities = ref([])
 const loading = ref(true)
-const error = ref<string | null>(null)
+const error = ref(null)
 
 async function fetchCities() {
   try {
@@ -151,7 +146,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p>&copy; 2024 Cities Explorer. All rights reserved.</p>
+          <p>© 2024 Cities Explorer. All rights reserved.</p>
         </div>
       </div>
     </footer>
