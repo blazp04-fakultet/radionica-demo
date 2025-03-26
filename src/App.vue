@@ -90,8 +90,7 @@ onMounted(() => {
           <div v-for="city in cities" :key="city.id"
             class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div class="relative">
-              <img :src="city.imageUrl" :alt="city.name" class="w-full h-56 object-cover"
-                @error="$event.target.src = 'https://via.placeholder.com/400x200?text=No+Image'">
+              <img :src="city.imageUrl" :alt="city.name" class="w-full h-56 object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div class="absolute bottom-0 left-0 p-6 text-white">
                 <h3 class="text-2xl font-bold mb-1">{{ city.name }}</h3>
